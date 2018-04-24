@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.cell.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<AnchorPane prefHeight="400.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="agentie.client.gui.AgentieController">
+   <children>
+      <TextField fx:id="numeClient" layoutX="25.0" layoutY="229.0" promptText="Client" />
+      <TextField fx:id="numeTuristi" layoutX="25.0" layoutY="266.0" promptText="Turisti" />
+      <TextField fx:id="adresa" layoutX="25.0" layoutY="303.0" promptText="Adresa Client" />
+      <TextField fx:id="locuri" layoutX="25.0" layoutY="346.0" promptText="Numar Locuri" />
+      <Button layoutX="268.0" layoutY="251.0" mnemonicParsing="false" onAction="#handleCumparare" text="Cumparare" />
+      <Button layoutX="268.0" layoutY="303.0" mnemonicParsing="false" onAction="#table" text="Button" />
+
+      <TableView fx:id="table" prefHeight="228.0" prefWidth="520.0">
+         <columns>
+            <TableColumn prefWidth="36.0" text="Id">
+               <cellValueFactory>
+                  <PropertyValueFactory property="id" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="114.0" text="Destinatie">
+               <cellValueFactory>
+                  <PropertyValueFactory property="Destinatie" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="142.0" text="Data">
+               <cellValueFactory>
+                  <PropertyValueFactory property="Plecare" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="108.0" text="Aeroport">
+               <cellValueFactory>
+                  <PropertyValueFactory property="Aeroport" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="125.0" text="Nr Locuri">
+               <cellValueFactory>
+                  <PropertyValueFactory property="NrLocuri" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+      </TableView>
+      <TextField fx:id="cautDest" layoutX="564.0" layoutY="21.0" promptText="Destinatia Cautata" />
+      <TextField fx:id="cautData" layoutX="564.0" layoutY="64.0" promptText="Data calatoriei" />
+      <Button layoutX="601.0" layoutY="114.0" mnemonicParsing="false" text="Cauta" onAction="#cautat" />
+   </children>
+</AnchorPane>

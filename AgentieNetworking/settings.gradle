@@ -1,0 +1,9 @@
+rootProject.name = 'AgentieNetworking'
+include 'Model'
+include 'Persistence'
+include 'Service'
+include 'Server'
+include 'Networking'
+include 'Client'
+include 'Client'
+
